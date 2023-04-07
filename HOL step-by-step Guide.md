@@ -1,5 +1,4 @@
-# Azure Container Apps and Container Instances ハンズオン  
-
+# Azure Container Apps and Container Instances ハンズオン
 
 <br />
 
@@ -141,7 +140,7 @@
   git remote -v
   ```
 
-  ※ **クローン先の GitHub URL が出力されたら OK (<自分のアカウント名>/AzureContainerApps-Hands-on-Lab-1 になっていることを確認 (kohei3110/AzureContainerApps-Hands-on-Lab-1になっていないことを確認)** 
+  ※ **クローン先の GitHub URL が出力されたら OK (<自分のアカウント名>/AzureContainerApps-Hands-on-Lab-1 になっていることを確認 (kohei3110/AzureContainerApps-Hands-on-Lab-1 になっていないことを確認)**
 
 <br />
 
@@ -1095,3 +1094,12 @@
 
 <br />
 
+## Exercise 5: Azure Container Instances の作成と実行
+
+### Task 1: バッチ実行用コンテナーイメージの作成とプッシュ
+
+<br />
+
+### Task 2: Azure Container Instances の作成と実行
+
+<br />
