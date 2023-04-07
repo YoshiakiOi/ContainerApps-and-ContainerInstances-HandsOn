@@ -54,7 +54,7 @@
 
 ### Task 1: リポジトリのフォーク
 
-- Web ブラウザを起動し、[ワークショップのリポジトリ](#https://github.com/kohei3110/AzureContainerApps-Hands-on-Lab-1)へ移動
+- Web ブラウザを起動し、[ワークショップのリポジトリ](#https://github.com/kohei3110/ContainerApps-and-ContainerInstances-HandsOn)へ移動
 
 - 画面右上の Fork をクリック
 
@@ -140,7 +140,7 @@
   git remote -v
   ```
 
-  ※ **クローン先の GitHub URL が出力されたら OK (<自分のアカウント名>/AzureContainerApps-Hands-on-Lab-1 になっていることを確認 (kohei3110/AzureContainerApps-Hands-on-Lab-1 になっていないことを確認)**
+  ※ **クローン先の GitHub URL が出力されたら OK (<自分のアカウント名>/ContainerApps-and-ContainerInstances-HandsOn になっていることを確認 (kohei3110/ContainerApps-and-ContainerInstances-HandsOn になっていないことを確認)**
 
 <br />
 
@@ -306,7 +306,7 @@
 - WSL で Windows 側のマウントされたディレクトリへ移動
 
   ```
-  cd /mnt/c/Users/AzureUser/Documents/AzureContainerApps-Hands-on-Lab-1
+  cd /mnt/c/Users/AzureUser/Documents/ContainerApps-and-ContainerInstances-HandsOn
   ```
 
 - docker build コマンドを実行しイメージを構築
@@ -889,7 +889,7 @@
   ※ 起動後、マウントされたディレクトリへ移動
 
   ```
-  cd /mnt/c/Users/AzureUser/Documents/AzureContainerApps-Hands-on-Lab-1
+  cd /mnt/c/Users/AzureUser/Documents/ContainerApps-and-ContainerInstances-HandsOn
   ```
 
 - イメージを構築
