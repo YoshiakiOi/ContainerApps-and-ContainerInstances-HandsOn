@@ -1098,8 +1098,46 @@
 
 ### Task 1: バッチ実行用コンテナーイメージの作成とプッシュ
 
+- Visual Studio Code の Explorer で "**.docker**" - "**ACI**" を展開し "**dockerfile** を選択
+
+  - dockerfile の中身を確認
+
+  <img src="<TBU>" />
+
+- デスクトップ上の "**Ubuntu**" ショートカットをダブルクリック
+
+- 操作用のプロンプトが起動
+
+- WSL で Windows 側のマウントされたディレクトリへ移動
+
+  ```
+  cd /mnt/c/Users/AzureUser/Documents/ContainerApps-and-ContainerInstances-HandsOn
+  ```
+
+- docker build コマンドを実行しイメージを構築
+
+  ```
+  docker build -t batch:v1 -f .docker/ACI/dockerfile .
+  ```
+
 <br />
 
 ### Task 2: Azure Container Instances の作成と実行
+
+- Azure Portal でコンテナーインスタンスを検索しクリック
+
+- コンテナーインスタンスの画面で作成をクリック
+
+- コンテナー名は任意 (batch-container など)、地域はリソースグループのリージョンと同じものを選択、SKU は Standard、イメージのソースは自身の Azure Container Registry を選択し、batch:v1 を選択。サイズは 1 vcpu、1.5 GiB メモリ、0 gpu のまま。
+
+- ネットワークタブは既定値のまま進む
+
+- 詳細タブは再起動ポリシーが「失敗時」になっていることを確認し、「確認および作成」をクリック
+
+- 「作成」をクリックし、Azure Container Instances (コンテナーグループ)を作成する
+
+- 作成されたコンテナーを開き、概要タブで「開始」をクリック
+
+- しばらく経過した後、「設定」のなかの「コンテナー」を選択。ログをクリックし「Test」と表示されていることを確認
 
 <br />
