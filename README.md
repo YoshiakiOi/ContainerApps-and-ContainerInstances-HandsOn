@@ -9,7 +9,7 @@
 ### ディレクトリ構成
 
 ┣ .docker  
-┃ ┣ ACI (ACI ハンズオン用の dockerfile) 
+┃ ┣ ACI (ACI ハンズオン用の dockerfile)  
 ┃ ┣ CS (ASP.NET Core の dockerfile)  
 ┃ ┗ Java (Java アプリの dockerfile)  
 ┣ .github  
