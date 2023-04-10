@@ -46,6 +46,12 @@
 
   - [Task 4: コンテナー アプリのスケーリング](#task-4-コンテナー-アプリのスケーリング)
 
+- [Exercise 5: Azure Container Instances の作成と実行](#exercise-5-azure-container-instances-の作成と実行)
+
+  - [Task 1: バッチ実行用コンテナーイメージの作成とプッシュ](#task-1-バッチ実行用コンテナーイメージの作成とプッシュ)
+
+  - [Task 2: Azure Container Instances の作成と実行](#task-2-azure-container-instances-の作成と実行)
+
 <br />
 
 ## 開発環境の準備
@@ -1102,7 +1108,7 @@
 
   - dockerfile の中身を確認
 
-  <img src="<TBU>" />
+  <img src="images/aci-01.png" />
 
 - デスクトップ上の "**Ubuntu**" ショートカットをダブルクリック
 
@@ -1117,8 +1123,22 @@
 - docker build コマンドを実行しイメージを構築
 
   ```
-  docker build -t batch:v1 -f .docker/ACI/dockerfile .
+  docker build -t yourregistry.azurecr.io/batch:v1 -f .docker/ACI/dockerfile .
   ```
+
+- docker push を使用してレジストリへプッシュ
+
+  ```
+  docker push yourregistry.azurecr.io/batch:v1
+  ```
+
+- Azure ポータルでコンテナー レジストリの管理ブレードへアクセス
+
+- 左側のメニューから「**リポジトリ**」を選択
+
+- リポジトリ内のイメージを確認
+
+  <img src="images/aci-02.png" />
 
 <br />
 
@@ -1130,14 +1150,27 @@
 
 - コンテナー名は任意 (batch-container など)、地域はリソースグループのリージョンと同じものを選択、SKU は Standard、イメージのソースは自身の Azure Container Registry を選択し、batch:v1 を選択。サイズは 1 vcpu、1.5 GiB メモリ、0 gpu のまま。
 
+<img src="images/aci-03.png" />
+<img src="images/aci-04.png" />
+
 - ネットワークタブは既定値のまま進む
+
+<img src="images/aci-05.png" />
 
 - 詳細タブは再起動ポリシーが「失敗時」になっていることを確認し、「確認および作成」をクリック
 
-- 「作成」をクリックし、Azure Container Instances (コンテナーグループ)を作成する
+<img src="images/aci-06.png" />
+
+- その後「作成」をクリックし、Azure Container Instances (コンテナーグループ)を作成する
+
+<img src="images/aci-07.png" />
 
 - 作成されたコンテナーを開き、概要タブで「開始」をクリック
 
+<img src="images/aci-08.png" />
+
 - しばらく経過した後、「設定」のなかの「コンテナー」を選択。ログをクリックし「Test」と表示されていることを確認
+
+<img src="images/aci-09.png" />
 
 <br />
