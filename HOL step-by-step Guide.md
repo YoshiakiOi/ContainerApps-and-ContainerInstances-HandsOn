@@ -6,11 +6,7 @@
 
 - [開発環境の準備](#開発環境の準備)
 
-  - [Task 1: リポジトリのフォーク](#task-1-リポジトリのフォーク)
-
-  - [Task 2: Git の初期構成](#task-2-git-の初期構成)
-
-  - [Task 3: 開発環境へのリポジトリのクローン](#task-3-開発環境へのリポジトリのクローン)
+  - [Task 1: 開発環境へのリポジトリのクローン](#task-1-開発環境へのリポジトリのクローン)
 
 - [Exercise 1: Docker イメージの構築と実行](#exercise-1-docker-イメージの構築と実行)
 
@@ -58,19 +54,7 @@
 
 <img src="images/development-environment.png" />
 
-### Task 1: リポジトリのフォーク
-
-- Web ブラウザを起動し、[ワークショップのリポジトリ](#https://github.com/kohei3110/ContainerApps-and-ContainerInstances-HandsOn)へ移動
-
-- 画面右上の Fork をクリック
-
-  <img src="images/github-fork-01.png" />
-
-- 自身のアカウントにリポジトリが複製されていることを確認
-
-<br />
-
-### Task 2: Git の初期構成
+### Task 1: 開発環境へのリポジトリのクローン
 
 - [Azure ポータル](#https://portal.azure.com)へアクセス
 
@@ -90,37 +74,7 @@
 
   <img src="images/git-config-01.png" />
 
-- Git の初期設定を実行
-
-  - ユーザー名の設定
-
-    ```
-    git config --global user.name "User Name"
-    ```
-
-    ※ User Name を自身の名前に変更
-
-  - Email アドレスの設定
-
-    ```
-    git config --global user.email "Email@Address"
-    ```
-
-    ※ {Email Address} を使用するメール アドレスに変更
-
-  - 設定値の確認
-
-    ```
-    git config --list --global
-    ```
-
-    ※ 設定したユーザー名・メール アドレスが出力されたら OK
-
-<br />
-
-### Task 3: 開発環境へのリポジトリのクローン
-
-- Web ブラウザで Fork したリポジトリの "**Code**" をクリック
+- Web ブラウザで このリポジトリの "**Code**" をクリック
 
   表示されるツール チップよりリポジトリの URL をコピー
 
@@ -145,8 +99,6 @@
   ```
   git remote -v
   ```
-
-  ※ **クローン先の GitHub URL が出力されたら OK (<自分のアカウント名>/ContainerApps-and-ContainerInstances-HandsOn になっていることを確認 (kohei3110/ContainerApps-and-ContainerInstances-HandsOn になっていないことを確認)**
 
 <br />
 
@@ -180,6 +132,7 @@
   <img src="images/dotnet-run-02.png" />
 
 - ターミナルで Ctrl + C を押下し、アプリケーションの実行を終了
+
 </details>
 
 <details>
@@ -405,7 +358,7 @@
 
   ※ コマンドのオプション
 
-  - **-p**: ポート マッピング（コンテナーの 5001 番ポートを 8080 番ポートへマッピング）
+  - **-p**: ポート マッピング（コンテナーの 80 番ポートを 8080 番ポートへマッピング）
 
   <img src="images/java-docker-run-01.png" />
 
