@@ -578,7 +578,7 @@
 - コンテナー アプリの作成
 
   - **Container Apps 環境** の地域を選択し「**新規作成**」をクリック
-
+<!-- 
     <img src="images/create-container-apps-02.png" />
 
     ※ 地域は使用するリソース グループ内に展開済みの仮想ネットワークと同じものを選択
@@ -621,7 +621,7 @@
 
         <img src="images/create-container-apps-env-03.png" />
 
-    - 「**Create**」をクリックし Container Apps 環境を作成
+    - 「**Create**」をクリックし Container Apps 環境を作成 -->
 
   - 「**基本**」
 
@@ -635,9 +635,9 @@
 
     - **Container Apps 環境**
 
-      ※ 先の手順で作成した環境名が表示されていることを確認
+      me-1 が選択できることを確認
 
-      <img src="images/create-container-apps-03.png" />
+      <img src="images/create-container-apps-08.png" />
 
   - 「**アプリ設定**」
 
