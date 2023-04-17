@@ -1127,3 +1127,19 @@
 <img src="images/aci-09.png" />
 
 <br />
+
+### Task 2 (補足 - Task 2がうまくいかない場合のみ): Azure CLI を利用した、Azure Container Instances の作成と実行
+
+- Azure CLI を起動
+
+- Azure CLI を最初にクリックすると、ストレージの作成が必要になるので、「詳細設定」をクリックし、ストレージアカウントを新規で作成（英数字のみかつ全世界でユニークな名前を入力）し、ファイル共有をひとつ作成する。
+
+- Azure CLI で以下のコマンドを実行する
+
+  ```
+  az container create --resource-group <リソースグループ名> --name <任意のコンテナー名> --image yourregistry.azurecr.io/batch:v1 --ports 80 --registry-password password --registry-username <ログインユーザー名>  --location <リージョン名>
+  ```
+
+<img src="images/aci-10.png" />
+
+<br />
